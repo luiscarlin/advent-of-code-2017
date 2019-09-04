@@ -1,0 +1,23 @@
+{
+  "name": "advent-of-code-2017",
+  "version": "1.0.0",
+  "description": "Advent of Code 2017 in JavaScript",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiscarlin/advent-of-code-2018-js.git"
+  },
+  "author": {
+    "name": "LuisCarlin",
+    "url": "https://github.com/LuisCarlin"
+  },
+  "license": "WTFPL",
+  "homepage": "https://github.com/luiscarlin/advent-of-code-2018-js#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
+    "fs": "^0.0.1-security",
+    "jest": "^24.1.0"
+  }
+}

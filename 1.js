@@ -1,14 +1,18 @@
 const fs = require("fs")
 
 const main = () => {
-  let lines = fs
+  const line = fs
     .readFileSync("./1.in", "utf8")
     .split(/\r?\n/)
-    .filter(Boolean)
+    .filter(Boolean)[0]
 
-  let line = lines[0]
+  console.log("part 1", firstPart(line))
+  console.log("part 2", secondPart(line))
+}
 
+const firstPart = line => {
   let sum = 0
+
   for (let i = 0; i < line.length; i++) {
     let currentNum = line[i]
     let nextNum = 0
@@ -24,7 +28,23 @@ const main = () => {
     }
   }
 
-  console.log("part 1", sum)
+  return sum
+}
+
+const secondPart = line => {
+  let half = line.length / 2
+  let sum = 0
+
+  for (let i = 0; i < line.length; i++) {
+    let currentNum = line[i]
+    let nextNum = line[(i + half) % line.length]
+
+    if (currentNum == nextNum) {
+      sum += parseInt(line[i])
+    }
+  }
+
+  return sum
 }
 
 if (require.main == module) {

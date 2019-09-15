@@ -10,8 +10,17 @@ const main = () => {
 
   let sum = 0
   for (let i = 0; i < line.length; i++) {
-    if (line[i] == line[i + 1]) {
-      sum += line[i]
+    let currentNum = line[i]
+    let nextNum = 0
+
+    if (i == line.length - 1) {
+      nextNum = line[0]
+    } else {
+      nextNum = line[i + 1]
+    }
+
+    if (currentNum == nextNum) {
+      sum += parseInt(line[i])
     }
   }
 

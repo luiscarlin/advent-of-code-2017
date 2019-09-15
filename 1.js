@@ -3,8 +3,8 @@ const fs = require("fs")
 const main = () => {
   const line = fs
     .readFileSync("./1.in", "utf8")
-    .split(/\r?\n/)
-    .filter(Boolean)[0]
+    .split("")
+    .map(n => Number(n))
 
   console.log("part 1", firstPart(line))
   console.log("part 2", secondPart(line))
@@ -15,16 +15,10 @@ const firstPart = line => {
 
   for (let i = 0; i < line.length; i++) {
     let currentNum = line[i]
-    let nextNum = 0
-
-    if (i == line.length - 1) {
-      nextNum = line[0]
-    } else {
-      nextNum = line[i + 1]
-    }
+    let nextNum = line[(i + 1) % line.length]
 
     if (currentNum == nextNum) {
-      sum += parseInt(line[i])
+      sum += line[i]
     }
   }
 
@@ -40,7 +34,7 @@ const secondPart = line => {
     let nextNum = line[(i + half) % line.length]
 
     if (currentNum == nextNum) {
-      sum += parseInt(line[i])
+      sum += line[i]
     }
   }
 

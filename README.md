@@ -1,6 +1,6 @@
 # Advent of Code 2017 JavaScript
 
-My solutions to Advent of Code 2018 in JavaScript
+My solutions to Advent of Code 2017 in JavaScript
 
 ## Get Started
 

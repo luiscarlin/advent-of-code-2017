@@ -1,19 +1,31 @@
-# Advent of Code 2017 JavaScript
+# Advent of Code 2017
 
-My solutions to Advent of Code 2017 in JavaScript
+## Prerequisites
 
-## Get Started
+- git
+- nvm
+- yarn
+
+## Setup
 
 ```bash
-# install dependencies
-yarn install
+git clone git@github.com:luiscarlin/advent-of-code-2017.git
+cd advent-of-code-2017
 
-# set some env vars
-cat <<EOF >.env
-COOKIE="your AoC cookie"
-YEAR="year of AoC"
-EOF
+nvm use
 
-# get input for any day
-node ./get_input.js 1 > 1.in
+yarn
+```
+
+## Commands
+
+```bash
+# run a script
+node someFile.js
+
+# run tests
+yarn test
+
+# run test watch
+yarn test:watch
 ```

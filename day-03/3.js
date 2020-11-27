@@ -1,7 +1,11 @@
-const num = 368078
+import ulam from 'zero-indexed-ulam-spiral'
 
-const main = () => {}
+const getDistance = (number) => {
+  const [x1, y1] = ulam.getLatticeCoordinatesFor(number - 1)
 
-if (require.main == module) {
-  main()
+  return Math.abs(x1) + Math.abs(y1)
 }
+
+console.log('part 1', getDistance(368078))
+
+export { getDistance }
